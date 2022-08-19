@@ -4,7 +4,10 @@ import React from 'react'
 
 function Cart() {
   return (
-    <div>Cart</div>
+    <div className="products">
+      <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+       Id voluptatum distinctio in ullam voluptatem, rerum placeat consequatur et laborum ea cum, illum illo.</h1>
+    </div>
   )
 }
 

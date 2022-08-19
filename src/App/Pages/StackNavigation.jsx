@@ -7,6 +7,7 @@ import ContactUs from './ContactUs'
 import Gallery from './Gallery'
 import Error from './Error'
 import Services from './Services'
+import Product from './Product'
 
 
 function StackNavigation() {
@@ -18,6 +19,7 @@ function StackNavigation() {
          <Route path='/ContactUs' element={ <ContactUs/>}/>
          <Route path='/Cart' element={ <Cart/>}/>
          <Route path='/AboutUs' element={ <AboutUs/>}/>
+         <Route path='/Product' element={ <Product/>}/>
          <Route path='/*' element={ <Error/>}/>
        </Routes>
   )

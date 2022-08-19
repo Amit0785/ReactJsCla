@@ -2,7 +2,8 @@ import React from 'react'
 
 function Product() {
   return (
-    <div  className="products">
+   <>
+    <div className="products">
          <div className="container">
             <div className="row">
                <div className="col-md-12">
@@ -78,6 +79,7 @@ function Product() {
             </div>
          </div>
       </div>
+      </>
   )
 }
 

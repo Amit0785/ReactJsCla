@@ -599,9 +599,9 @@ ul.btn li:last-child {
 /** products section **/
 
 .products {
-     margin-top: 90px;
-     background: #f7f7f7;
-     padding: 90px 0 90px 0;
+    
+     background: #b51c5e;
+     padding: 190px 0 90px 0;
 }
 
 .our_products {
@@ -786,7 +786,7 @@ ul.btn li:last-child {
      background: url(../images/contact_g.jpg);
      background-repeat: no-repeat;
      background-size: 100% 100%;
-     padding: 90px 0;
+     padding: 190px 0;
 }
 
 .contact .titlepage h2 {

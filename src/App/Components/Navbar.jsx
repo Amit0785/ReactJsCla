@@ -1,13 +1,18 @@
 import React from 'react'
+import {useSelector} from 'react-redux'
 import Badge from '@mui/material/Badge';
 import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import {useNavigate} from 'react-router-dom'
 
 function Navbar() {
 
-   //const [mystate, setMystate] = useState(1)
-   const mystate=1
+   const navigation=useNavigate()
+   const mystate=useSelector((state)=>state.UpDown)
+   //const mystate=1
+   
   return (
+   <>
     <div className="header">
             <div className="container-fluid">
                <div className="row">
@@ -28,33 +33,34 @@ function Navbar() {
                         <div className="collapse navbar-collapse" id="navbarsExample04">
                            <ul className="navbar-nav mr-auto">
                               <li className="nav-item active">
-                                 <a className="nav-link" href="/">Home</a>
+                                 <a className="nav-link" href="/" onClick={()=>{ navigation('/')}}>Home</a>
                               </li>
                               <li className="nav-item">
-                                 <a className="nav-link" href="/">About</a>
+                                 <a className="nav-link" onClick={()=>{ navigation('/AboutUs')}}>About</a>
                               </li>
                               <li className="nav-item">
-                                 <a className="nav-link" href="/">Computer</a>
+                                 <a className="nav-link" href="/Services"  onClick={()=>{ navigation('/Services')}}>Services</a>
                               </li>
                               <li className="nav-item">
-                                 <a className="nav-link" href="/">Laptop</a>
+                                 <a className="nav-link" href="/Gallery"  onClick={()=>{ navigation('/Gallery')}}>Gallery</a>
                               </li>
                               <li className="nav-item">
-                                 <a className="nav-link" href="/">Products</a>
+                                 <a className="nav-link" href="/Product" onClick={()=>{ navigation('/Product')}}>Products</a>
                               </li>
                               <li className="nav-item">
-                                 <a className="nav-link" href="/">Contact Us</a>
+                                 <a className="nav-link"  href="/ContactUs" onClick={()=>{ navigation('/ContactUs')}}>Contact Us</a>
                               </li>
                              
                               <li className="nav-item d_none">
-                                 <a className="nav-link" href="/">
+                                 <a className="nav-link" onClick={()=>{ navigation('/Cart')}}>
                                  <IconButton aria-label="cart" color='primary' >
-      <Badge badgeContent={mystate} color="secondary" >
-        <ShoppingCartIcon size='large'/>
-      </Badge> 
+                                    <Badge badgeContent={mystate} color="secondary" >
+                                      <ShoppingCartIcon size='large'/>
+                                    </Badge> 
       
-    </IconButton>
-                                 Cart</a>
+                                 </IconButton>
+                                 Cart
+                                 </a>
                               </li>
                            </ul>
                         </div>
@@ -63,6 +69,7 @@ function Navbar() {
                </div>
             </div>
     </div>
+    </>
   )
 }
 

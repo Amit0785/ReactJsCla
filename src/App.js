@@ -6,12 +6,12 @@ import Footer from './App/Components/Footer';
 
 function App() {
   return (
-   <>
+   <div style={{flex:1}}>
    <Navbar/>
    <StackNavigation/>
    <Footer/>
 
-   </>
+   </div>
   );
 }
 
